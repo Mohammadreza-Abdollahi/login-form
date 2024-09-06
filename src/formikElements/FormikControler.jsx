@@ -1,5 +1,6 @@
 import FormCheckbox from './FormCheckbox';
 import FormInput from './FormInput'
+import FormPasswordInput from './FormPasswordInfo';
 import FormRadio from './FormRadio';
 import FormSelect from './FormSelect';
 import FormTextarea from "./FormTextarea";
@@ -9,6 +10,10 @@ const FormikControler = (props) => {
         case 'input':
             return(
                 <FormInput {...props}/>
+            ) 
+        case 'password':
+            return(
+                <FormPasswordInput {...props}/>
             ) 
         case 'textarea': 
             return(

@@ -10,6 +10,7 @@ const FormRadio = (props) => {
                 <FastField name={name} id={name}>
                 {
                     ({field})=>{
+                        console.log(props.formik);
                             return option.map((item)=>(
                                     <div key={item.id} className="inline-block ms-3 text-lg text-heading">
                                         <label htmlFor={`radio${item.id}`} className="mx-2">

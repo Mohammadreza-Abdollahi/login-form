@@ -13,7 +13,7 @@ const RegisterForm = () => {
         <>
             <section className="custom-bg p-10">
                 <div className="bg-white w-4/5 m-auto rounded-3xl shadow-2xl shadow-slate-300 flex items-center">
-                    <section className="w-1/2 inline-block align-top py-7 px-40">
+                    <section className="w-1/2 inline-block align-top py-7 px-16">
                         <h1 className='text-5xl text-heading mb-3'>ثبت نام</h1>
                         <span className='text-sub-1 text-lg'>حساب کاربری دارید؟</span><a className='text-sub-2 text-lg mx-1' href="#">ورود</a>
                         <Formik
@@ -21,16 +21,17 @@ const RegisterForm = () => {
                         onSubmit={onSubmit}
                         validationSchema={validationSchema}
                         validateOnBlur={false}
+                        validateOnChange={false}
                         >
                             {
                                 Formik=>{
                                     return(
                                         <Form className='mt-4'>
                                             <div className='mb-3'>
-                                                <FormikControler {...Field} formik={Formik} type={'text'} control={'input'} name={'firstName'} label={'نام'} placeholder={'نام خود را وارد کنید...'}/>
+                                                <FormikControler {...Field} formik={Formik} type={'text'} control={'input'} name={'firstName'} label={'نام (اختیاری)'} placeholder={'نام خود را وارد کنید...'}/>
                                             </div>
                                             <div className='mb-3'>
-                                                <FormikControler {...Field} formik={Formik} type={'text'} control={'input'} name={'lastName'} label={'نام خانوادگی'} placeholder={'نام خانوادگی خود را وارد کنید...'}/>
+                                                <FormikControler {...Field} formik={Formik} type={'text'} control={'input'} name={'lastName'} label={'نام خانوادگی (اختیاری)'} placeholder={'نام خانوادگی خود را وارد کنید...'}/>
                                             </div>
                                             <div className='mb-3'>
                                                 <FormikControler {...Field} formik={Formik} type={'text'} control={'input'} name={'userName'} label={'نام کاربری'} placeholder={'نام کاربری خود را وارد کنید...'}/>
@@ -45,7 +46,7 @@ const RegisterForm = () => {
                                                 </div>
                                                 ) : (
                                                 <div className='mb-3'>
-                                                    <FormikControler {...Field} formik={Formik} type={'text'} control={'input'} name={'email'} label={'ایمیل'} placeholder={'ایمیل  خود را وارد کنید...'}/>
+                                                    <FormikControler {...Field} formik={Formik} type={'text'} control={'input'} name={'email'} label={'ایمیل'} placeholder={'ایمیل خود را وارد کنید...'}/>
                                                 </div>
                                                 )
                                             }

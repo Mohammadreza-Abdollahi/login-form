@@ -7,8 +7,8 @@ const LoginForm = () => {
     return ( 
         <>
             <section className="custom-bg p-10">
-                <div className="bg-white w-4/5 m-auto rounded-3xl shadow-2xl shadow-slate-300">
-                    <section className="w-1/2 inline-block align-top py-28 px-40">
+                <div className="bg-white w-4/5 m-auto rounded-3xl shadow-2xl shadow-slate-300 flex items-center">
+                    <section className="w-1/2 inline-block align-top py-20 px-40">
                         <h1 className='text-5xl text-heading mb-3'>ورود</h1>
                         <span className='text-sub-1 text-lg'>حساب کاربری ندارید؟</span><a className='text-sub-2 text-lg mx-1' href="#">ساخت حساب کاربری</a>
                         <Formik
@@ -21,11 +21,11 @@ const LoginForm = () => {
                             {
                                 Formik=>{
                                     return(
-                                        <Form className='mt-16'>
-                                            <div className='mb-7'>
+                                        <Form className='mt-8'>
+                                            <div className='mb-3'>
                                                 <FormikControler {...Field} formik={Formik} type={'text'} control={'input'} name={'email'} label={'ایمیل'} placeholder={'ایمیل خود را وارد کنید...'}/>
                                             </div>
-                                            <div className='mb-7'>
+                                            <div className='mb-3'>
                                                 <FormikControler formik={Formik} type={'password'} control={'password'} name={'password'} label={'رمزعبور'} placeholder={'رمزعبور خود را وارد کنید...'}/>
                                             </div>
                                             <div>

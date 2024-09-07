@@ -1,7 +1,7 @@
 import { Field, Form, Formik } from 'formik';
 import Vector from '../assets/img/vector.png'
 import FormikControler from '../formikElements/FormikControler';
-import { initialValues, onSubmit, validationSchema } from '../formik/FormikLounching';
+import { initialValues, onSubmit, validationSchema } from '../formik/LoginFormLounching';
 
 const LoginForm = () => {
     return ( 

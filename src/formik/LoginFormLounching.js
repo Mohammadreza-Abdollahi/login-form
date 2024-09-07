@@ -5,7 +5,7 @@ export const initialValues = {
 };
 export const onSubmit = (values , submitProps)=>{
     setTimeout(()=>{
-        console.log(submitProps);
+        console.log(values);
         submitProps.resetForm();
     },5000)
 };

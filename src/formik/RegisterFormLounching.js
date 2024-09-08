@@ -8,6 +8,7 @@ export const initialValues = {
     password: '',
     confirmPassword: '',
     loginWith: 'mobile',
+    date: ''
 };
 export const onSubmit = (values)=>{
     alert(JSON.stringify(values));
@@ -17,8 +18,7 @@ export const validationSchema = Yup.object({
                  .required('نام کاربری نمیتواند خالی باشد!')
                  .min(6,'نام کاربری باید حداقل هاوی 8 کاراکتر باشد!')
                  .matches(/(?=.*[0-9])/g,'نام کاربری باید هاوی اعداد باشد!')
-                 .matches(/^[^$%@#^&*()+="':?></|]+/g,'نام کاربری فقط میتواند هاوی کاراکتر های (- و _) باشد!'),
-
+                 .matches(/(?=.*[-_!@#$%^&*])/g,'نام کاربری باید هاوی یک کاراکتر خاص باشد'),
     email: Yup.string().when('loginWith',{
         is: (loginWith)=>loginWith === 'email',
         then: ()=>(
@@ -43,5 +43,7 @@ export const validationSchema = Yup.object({
                  .matches(/(?=.*[-_!@#$%^&*])/g,'رمزعبور باید هاوی یک کاراکتر خاص باشد'),
     confirmPassword: Yup.string()
                         .oneOf([Yup.ref('password') , ''] , 'رمز عبور با تکرار رمز عبور مطابقت ندارد!')
-                        .required('تکرار رمز عبور نمیتواند خالی باشد!')
+                        .required('تکرار رمز عبور نمیتواند خالی باشد!'),
+    date: Yup.string()
+             .required('تاریخ نمیتواند خالی باشد!')
     })

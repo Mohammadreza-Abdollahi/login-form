@@ -13,7 +13,7 @@ const RegisterForm = () => {
         <>
             <section className="custom-bg p-10">
                 <div className="bg-white w-4/5 m-auto rounded-3xl shadow-2xl shadow-slate-300 flex items-center">
-                    <section className="w-1/2 inline-block align-top py-7 px-16">
+                    <section className="w-1/2 inline-block align-top py-7 px-24">
                         <h1 className='text-5xl text-heading mb-3'>ثبت نام</h1>
                         <span className='text-sub-1 text-lg'>حساب کاربری دارید؟</span><a className='text-sub-2 text-lg mx-1' href="#">ورود</a>
                         <Formik
@@ -50,6 +50,9 @@ const RegisterForm = () => {
                                                 </div>
                                                 )
                                             }
+                                            <div className='mb-3'>
+                                                <FormikControler formik={Formik} control={'date'} name={'date'} label={'تاریخ تولد :'}/>
+                                            </div>
                                             <div className='mb-3'>
                                                 <FormikControler {...Field} formik={Formik} type={'text'} control={'password'} name={'password'} label={'رمزعبور '} placeholder={'رمز عبور خود را وارد کنید...'}/>
                                             </div>

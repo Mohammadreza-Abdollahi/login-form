@@ -1,4 +1,5 @@
 import FormCheckbox from './FormCheckbox';
+import FormDate from './FormDate';
 import FormInput from './FormInput'
 import FormPasswordInput from './FormPasswordInfo';
 import FormRadio from './FormRadio';
@@ -30,6 +31,10 @@ const FormikControler = (props) => {
         case 'checkbox': 
             return(
                 <FormCheckbox {...props}/>
+            )
+        case 'date': 
+            return(
+                <FormDate {...props}/>
             )
         default:
             return

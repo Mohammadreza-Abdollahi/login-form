@@ -2,12 +2,10 @@ import * as Yup from 'yup'
 export const initialValues = {
     email: '',
     password: '',
+    date: ''
 };
 export const onSubmit = (values , submitProps)=>{
-    setTimeout(()=>{
-        console.log(values);
-        submitProps.resetForm();
-    },5000)
+    alert(JSON.stringify(values))
 };
 export const validationSchema = Yup.object({
     email: Yup.string()
@@ -18,5 +16,6 @@ export const validationSchema = Yup.object({
                  .min(8,'رمزعبور باید حداقل هاوی 8 کاراکتر باشد!')
                  .matches(/^(?=.*[A-Z])/g,'رمزعبور باید ترکیبی از حروف کوچک و بزرگ باشد!')
                  .matches(/(?=.*[0-9])/g,'رمز عبور باید هاوی اعداد باشد!')
-                 .matches(/(?=.*[-_!@#$%^&*])/,'رمزعبور باید هاوی یک کاراکتر خاص باشد')
+                 .matches(/(?=.*[-_!@#$%^&*])/,'رمزعبور باید هاوی یک کاراکتر خاص باشد'),
+    date: Yup.string().required('تاریخ نمیتواند خالی باشد!')
     })

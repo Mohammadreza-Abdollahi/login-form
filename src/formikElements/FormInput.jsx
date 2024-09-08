@@ -9,7 +9,7 @@ const FormInput = (props) => {
                 <label className={`${formik.errors[name] ? 'text-red-500' : 'text-label-border'} text-sm mx-3`} htmlFor={name}>{label}</label>
                 <div className="relative">
                     <FastField name={name}>
-                        {props=><input {...props.field} type={type} id={name} placeholder={formik.errors[name] ? formik.errors[name] : placeholder} className={`${formik.errors[name] ? 'ring-red-500 focus:ring-red-500  placeholder:text-red-500': 'ring-label-border focus:ring-sub-2 placeholder:text-lg  placeholder:text-gray-400'} transition duration-200 block m-auto w-full rounded-xl outline-none px-3 py-3 text-heading ring-2 ring-inset ring-label-border focus:ring-2 text-xl`}/>}
+                        {props=><input {...props.field} type={type} id={name} placeholder={formik.errors[name] ? formik.errors[name] : placeholder} className={`${formik.errors[name] ? 'ring-red-500 focus:ring-red-500  placeholder:text-red-500': 'ring-label-border focus:ring-sub-2 placeholder:text-lg  placeholder:text-gray-400'} transition duration-200 block m-auto w-full rounded-xl outline-none px-3 py-3 text-heading ring-2 ring-inset ring-label-border focus:ring-2 text-xl pl-12`}/>}
                     </FastField>
                     {
                         formik.errors[name] ? (

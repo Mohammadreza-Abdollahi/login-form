@@ -28,6 +28,9 @@ const LoginForm = () => {
                                             <div className='mb-3'>
                                                 <FormikControler formik={Formik} type={'password'} control={'password'} name={'password'} label={'رمزعبور'} placeholder={'رمزعبور خود را وارد کنید...'}/>
                                             </div>
+                                            <div className='mb-3'>
+                                                <FormikControler formik={Formik} control={'file'} name={'image'} label={'تصویر :'} placeholder={'تصویر خود را وارد کنید...'}/>
+                                            </div>
                                             <div>
                                                 <button onClick={Formik.handleSubmit} className='w-full text-center transition duration-200 bg-gradient-to-r from-btn-1 to-btn-2 text-white text-xl py-4 hover:scale-110 rounded-xl mt-3 mb-3'>ثبت نام</button>
                                             </div>

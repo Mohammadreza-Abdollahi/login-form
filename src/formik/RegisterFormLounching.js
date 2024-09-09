@@ -8,7 +8,8 @@ export const initialValues = {
     password: '',
     confirmPassword: '',
     loginWith: 'mobile',
-    date: ''
+    date: '',
+    image: null
 };
 export const onSubmit = (values)=>{
     alert(JSON.stringify(values));

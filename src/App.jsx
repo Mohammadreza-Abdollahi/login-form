@@ -4,8 +4,8 @@ import RegisterForm from "./components/RegisterForm";
 const App = () => {
   return ( 
     <>
-      {/* <LoginForm/> */}
-      <RegisterForm/>
+      <LoginForm/>
+      {/* <RegisterForm/> */}
     </>
    );
 }

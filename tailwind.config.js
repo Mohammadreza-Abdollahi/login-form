@@ -10,6 +10,8 @@ module.exports = {
         'label-border' : '#207198',
         'btn-1' : '#EE5757',
         'btn-2' : '#FE904B',
+        'disable-lable-border' : '#CCD1D2',
+        'disable-bg' : '#F6F6F6',
       }
     },
   },

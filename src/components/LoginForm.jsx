@@ -2,6 +2,7 @@ import { Field, Form, Formik } from 'formik';
 import Vector from '../assets/img/vector.png'
 import FormikControler from '../formikElements/FormikControler';
 import { initialValues, onSubmit, validationSchema } from '../formik/LoginFormLounching';
+import { Link } from 'react-router-dom';
 
 const LoginForm = () => {
     return ( 
@@ -10,7 +11,7 @@ const LoginForm = () => {
                 <div className="bg-white w-4/5 m-auto rounded-3xl shadow-2xl shadow-slate-300 flex items-center">
                     <section className="w-1/2 inline-block align-top py-20 px-40">
                         <h1 className='text-5xl text-heading mb-3'>ورود</h1>
-                        <span className='text-sub-1 text-lg'>حساب کاربری ندارید؟</span><a className='text-sub-2 text-lg mx-1' href="#">ساخت حساب کاربری</a>
+                        <span className='text-sub-1 text-lg'>حساب کاربری ندارید؟</span><Link to={'/register'} className='text-sub-2 text-lg mx-1' href="#">ساخت حساب کاربری</Link>
                         <Formik
                         initialValues={initialValues}
                         onSubmit={onSubmit}
@@ -27,9 +28,6 @@ const LoginForm = () => {
                                             </div>
                                             <div className='mb-3'>
                                                 <FormikControler formik={Formik} type={'password'} control={'password'} name={'password'} label={'رمزعبور'} placeholder={'رمزعبور خود را وارد کنید...'}/>
-                                            </div>
-                                            <div className='mb-3'>
-                                                <FormikControler formik={Formik} control={'file'} name={'image'} label={'تصویر :'} placeholder={'تصویر خود را وارد کنید...'}/>
                                             </div>
                                             <div>
                                                 <button onClick={Formik.handleSubmit} className='w-full text-center transition duration-200 bg-gradient-to-r from-btn-1 to-btn-2 text-white text-xl py-4 hover:scale-110 rounded-xl mt-3 mb-3'>ثبت نام</button>
